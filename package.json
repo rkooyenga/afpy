@@ -1,0 +1,16 @@
+{
+  "name": "afpy",
+  "version": "1.0.0",
+  "description": "A simple rss server",
+  "main": "server.js",
+  "dependencies": {
+    "express": "^4.18.2",
+    "rss-parser": "^3.12.0",
+    "node-fetch": "^2.6.1"
+  },
+  "type": "module",
+  "scripts": {
+    "start": "node server.js"
+  }
+}
+
