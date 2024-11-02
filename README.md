@@ -1,2 +1,5 @@
 # afpy
-simple RSS feed parser in node
+
+simple RSS feed parsing server in node
+
+
