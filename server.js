@@ -3,12 +3,23 @@ import fetch from 'node-fetch';
 import RSSParser from 'rss-parser';
 
 const app = express();
-const PORT = process.env.PORT || 3000;
+const PORT = 8080;
 const rssParser = new RSSParser();
 
+// CORS setup to allow maximum availability
+app.use((req, res, next) => {
+  res.setHeader('Access-Control-Allow-Origin', '*'); // Allow any origin
+  res.setHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, OPTIONS'); // Allow any HTTP method
+  res.setHeader('Access-Control-Allow-Headers', 'Content-Type, Authorization'); // Allow custom headers if needed
+  res.setHeader('Access-Control-Max-Age', '86400'); // Cache preflight requests for 1 day
+  next();
+});
+
+// Example route to fetch RSS feed
 app.get('/', async (req, res) => {
   const feedUrl = req.query.q;
   const callback = req.query.callback;
+  const num = parseInt(req.query.num, 10); // Get the num parameter and parse it as an integer
 
   if (!feedUrl) {
     return res.status(400).json({ error: 'Missing "q" query parameter with feed URL.' });
@@ -19,20 +30,25 @@ app.get('/', async (req, res) => {
     const feedText = await feedResponse.text();
     const parsedFeed = await rssParser.parseString(feedText);
 
+    const entries = parsedFeed.items.map((item) => ({
+      title: item.title,
+      link: item.link,
+      author: item.creator || item.author,
+      publishedDate: item.pubDate || item.isoDate,
+      content: item.content || item['content:encoded'],
+      contentSnippet: item.contentSnippet,
+    }));
+
+    // Limit the number of results if num is specified and valid
+    const limitedEntries = Number.isNaN(num) || num <= 0 ? entries : entries.slice(0, num);
+
     const responseData = {
       feed: {
         title: parsedFeed.title,
         description: parsedFeed.description,
         link: parsedFeed.link,
       },
-      entries: parsedFeed.items.map((item) => ({
-        title: item.title,
-        link: item.link,
-        author: item.creator || item.author,
-        publishedDate: item.pubDate || item.isoDate,
-        content: item.content || item['content:encoded'],
-        contentSnippet: item.contentSnippet,
-      })),
+      entries: limitedEntries, // Use the limited entries array
     };
 
     if (callback) {
@@ -52,4 +68,3 @@ app.get('/', async (req, res) => {
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
 });
-
