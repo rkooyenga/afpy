@@ -1,0 +1,27 @@
+lang: en-US
+theme: jekyll-theme-minima
+remote_theme: jekyll/minima
+minima:
+  skin: classic
+  date_format: "%a, %b %-d, %Y"
+  social_links:
+    - { platform: github, user_url: "https://github.com/rkooyenga/" }
+    - { platform: twitter, user_url: "https://twitter.com/rayktweets/" }
+    - { platform: youtube, user_url: "https://www.youtube.com/@raykooyenga/" }
+title: Ray Kooyenga (org) Github Pages
+author: 
+  name: Ray Kooyenga
+  email: gmc5oz4k7@mozmail.com
+name: rkooyenga.github.io
+twitter: 
+picture:
+twitter_username: rayktweets
+github_username: rkooyenga
+logo: https://avatars.githubusercontent.com/u/9654073
+links_to_prev_next: true
+plugins:
+  - jekyll-remote-theme
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-seo-tag
+  - jekyll-pwa-plugin
