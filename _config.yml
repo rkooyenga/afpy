@@ -1,6 +1,6 @@
 encoding: utf-8
 lang: en-US
-remote_theme: deadflowers/minima
+remote_theme: deadflowers/minima/blob/demo-site
 
 #specific to minima https://github.com/jekyll/minima/blob/master/_config.yml
 minima:
