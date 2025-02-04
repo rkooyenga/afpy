@@ -94,4 +94,4 @@ paginate_path: /page:num/
 #links_to_prev_next: true
 
 # Header and footer text
-footer_text: made with github pages, jekyll, and some typing
+# footer_text: made with github pages, jekyll, and some typing
