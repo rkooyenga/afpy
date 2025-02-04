@@ -21,34 +21,33 @@ minima:
     
 title: afpy rss feed getter
 description: a GH Pages installation
+title_separator: "-"
+subtitle: 
 url: "https://rkooyenga.github.io"
 baseurl: "/afpy"
 logo: "https://avatars.githubusercontent.com/u/6174603"
+og_image:
 avatar: 
-email: gmc5oz4k7@mozmail.com
 
 author: 
   name: Ray Kooyenga
-  twitter: rayktweets
+  x: rayktweets
   picture: "https://avatars.githubusercontent.com/u/9654073"
+  email: gmc5oz4k7@mozmail.com
+
 twitter_username: rayktweets
 github_username: rkooyenga
-#codepen_username: deadflowers
-og_image:
 
-
-
-
-
-twitter: rayktweets
+x: rayktweets
 github: rkooyenga
+linkedin: ray-kooyenga-0a4753176
+youtube: raykooyenga
+
 #codepen: deadflowers
 #imdb: nm15105839
 #instagram: raykooyenga
-youtube: raykooyenga
 #threads: raykooyenga
 #tidal: 170928610
-linkedin: ray-kooyenga-0a4753176
 #medium:
 
 #gravatar:
