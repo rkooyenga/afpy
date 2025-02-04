@@ -5,7 +5,7 @@ baseurl: "/<repo>"
 encoding: utf-8
 lang: en-US
 name: rkooyenga.github.io
-avatar:
+avatar: 
 logo: https://avatars.githubusercontent.com/u/6174603
 picture: https://avatars.githubusercontent.com/u/9654073
 fonts: https://rkooyenga.github.io/fonts
@@ -19,29 +19,29 @@ minima:
   social_links:
     - { platform: github, user_url: "https://github.com/rkooyenga" }
     - { platform: twitter, user_url: "https://twitter.com/rayktweets" }
-    - { platform: codepen, user_url: "https://codepen.io/deadflowers" }
+#    - { platform: codepen, user_url: "https://codepen.io/deadflowers" }
     - { platform: imdb, user_url: "https://imdb.com/name/nm15105839" }
     - { platform: linkedin, user_url: "https://www.linkedin.com/in/ray-kooyenga-0a4753176" }
-    - { platform: tidal, user_url: "https://tidal.com/browse/user/170928610" }
-    - { platform: threads, user_url: "https://www.threads.net/@raykooyenga" }
-    - { platform: instagram, user_url: "https://www.instagram.com/raykooyenga" }
+#    - { platform: tidal, user_url: "https://tidal.com/browse/user/170928610" }
+#    - { platform: threads, user_url: "https://www.threads.net/@raykooyenga" }
+#    - { platform: instagram, user_url: "https://www.instagram.com/raykooyenga" }
     - { platform: youtube, user_url: "https://www.youtube.com/@raykooyenga" }
 
 twitter_username: rayktweets
 github_username: rkooyenga
-codepen_username: deadflowers
+#codepen_username: deadflowers
 twitter: rayktweets
-github: rkooyenga
-codepen: deadflowers
-imdb: nm15105839
-instagram: raykooyenga
+#github: rkooyenga
+#codepen: deadflowers
+#imdb: nm15105839
+#instagram: raykooyenga
 youtube: raykooyenga
-threads: raykooyenga
-tidal: 170928610
-linkedin: ray-kooyenga-0a4753176
-medium:
+#threads: raykooyenga
+#tidal: 170928610
+#linkedin: ray-kooyenga-0a4753176
+#medium:
 
-gravatar:
+#gravatar:
 orcid: https://orcid.org/0009-0007-8239-4582
 
 plugins:
@@ -50,8 +50,8 @@ plugins:
   - jekyll-sitemap
   - jekyll-seo-tag
   - jekyll-pwa-plugin
-  - jekyll-paginate
   - jekyll-admin
+#  - jekyll-paginate  
   
 markdown: kramdown
 highlighter: rouge
@@ -60,13 +60,13 @@ sass:
   style: :compressed
 
   # PAGINATION
-permalink: /blog/:categories/:year/:month/:day/:title.html
-paginate: 10
-paginate_path: "blog/:num"
-paginate_category: "blog"
-gems: [jekyll-paginate]
+#permalink: /blog/:categories/:year/:month/:day/:title.html
+#paginate: 10
+#paginate_path: "blog/:num"
+#paginate_category: "blog"
+#gems: [jekyll-paginate]
 
-links_to_prev_next: true
+#links_to_prev_next: true
 
 # Header and footer text
 footer_text: made with github pages, jekyll, and some typing
