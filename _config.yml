@@ -1,39 +1,43 @@
 encoding: utf-8
 lang: en-US
 remote_theme: jekyll/minima
-title: <repo>
+
+#specific to minima https://github.com/jekyll/minima/blob/master/_config.yml
+minima:
+  skin: solarized
+  date_format: "%a, %b %-d, %Y"
+  social_links:
+    - { platform: github, user_url: "https://github.com/rkooyenga" }
+    - { platform: x, user_url: "https://x.com/rayktweets" }
+    - { platform: linkedin, user_url: "https://www.linkedin.com/in/ray-kooyenga-0a4753176" }
+    - { platform: youtube, user_url: "https://www.youtube.com/@raykooyenga" }
+
+#    - { platform: codepen, user_url: "https://codepen.io/deadflowers" }
+#    - { platform: imdb, user_url: "https://imdb.com/name/nm15105839" }
+#    - { platform: tidal, user_url: "https://tidal.com/browse/user/170928610" }
+#    - { platform: threads, user_url: "https://www.threads.net/@raykooyenga" }
+#    - { platform: instagram, user_url: "https://www.instagram.com/raykooyenga" }
+
+    
+title: afpy rss feed getter
 description: a GH Pages installation
 url: "https://rkooyenga.github.io"
-baseurl: "/<repo>"
-logo: https://avatars.githubusercontent.com/u/6174603
-name: rkooyenga.github.io
-
+baseurl: "/afpy"
+logo: "https://avatars.githubusercontent.com/u/6174603"
 avatar: 
+email: gmc5oz4k7@mozmail.com
 
 author: 
   name: Ray Kooyenga
   twitter: rayktweets
-  picture: https://avatars.githubusercontent.com/u/9654073
-  email: gmc5oz4k7@mozmail.com
+  picture: "https://avatars.githubusercontent.com/u/9654073"
 twitter_username: rayktweets
 github_username: rkooyenga
 #codepen_username: deadflowers
+og_image:
 
-fonts: https://rkooyenga.github.io/fonts
 
-minima:
-  skin: dark
-  date_format: "%a, %b %-d, %Y"
-  social_links:
-    - { platform: github, user_url: "https://github.com/rkooyenga" }
-    - { platform: twitter, user_url: "https://twitter.com/rayktweets" }
-#    - { platform: codepen, user_url: "https://codepen.io/deadflowers" }
-#    - { platform: imdb, user_url: "https://imdb.com/name/nm15105839" }
-    - { platform: linkedin, user_url: "https://www.linkedin.com/in/ray-kooyenga-0a4753176" }
-#    - { platform: tidal, user_url: "https://tidal.com/browse/user/170928610" }
-#    - { platform: threads, user_url: "https://www.threads.net/@raykooyenga" }
-#    - { platform: instagram, user_url: "https://www.instagram.com/raykooyenga" }
-    - { platform: youtube, user_url: "https://www.youtube.com/@raykooyenga" }
+
 
 
 twitter: rayktweets
@@ -57,13 +61,20 @@ plugins:
   - jekyll-seo-tag
   - jekyll-pwa-plugin
   - jekyll-admin
-#  - jekyll-paginate  
-  
+  - jekyll-paginate
+
 markdown: kramdown
 highlighter: rouge
 sass:
   sass_dir: _sass
   style: :compressed
+
+feed:
+  path: atom.xml
+
+# Pagination - https://jekyllrb.com/docs/pagination/
+paginate: 10
+paginate_path: /page:num/
 
   # PAGINATION
 #permalink: /blog/:categories/:year/:month/:day/:title.html
